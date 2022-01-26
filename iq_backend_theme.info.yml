@@ -1,0 +1,28 @@
+name: Unicorn Backend theme
+type: theme
+description: 'A moden backend theme, based on the gin backend theme.'
+version: VERSION
+core_version_requirement: ^8 || ^9
+base theme: gin
+
+libraries:
+  - iq_backend_theme/gin_overrides
+
+dependencies:
+- gin_toolbar
+- gin_login
+
+# Regions
+regions:
+  header: 'Header'
+  pre_content: 'Pre-content'
+  breadcrumb: Breadcrumb
+  highlighted: Highlighted
+  help: Help
+  content: Content
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  sidebar_first: 'First sidebar'
+regions_hidden:
+  - sidebar_first
+

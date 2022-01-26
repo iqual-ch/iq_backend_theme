@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * Set Gin CSS on top of all other CSS files.
+ */
+function iq_backend_theme_css_alter(&$css, $assets) {
+
+  // I'm hacky and i know it.
+  // Force gin-overrides.css to be loaded after gin.css.
+  // See https://www.drupal.org/project/gin/issues/3156574
+  $path = drupal_get_path('theme', 'iq_backend_theme') . '/resources/css/gin-overrides.css';
+
+  if (isset($css[$path])) {
+    $css[$path]['group'] = 210;
+  }
+}

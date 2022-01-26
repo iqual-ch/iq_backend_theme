@@ -1,0 +1,13 @@
+preset_accent_color: custom
+accent_color: '#ee865d'
+preset_focus_color: custom
+focus_color: '#e95e27'
+enable_darkmode: 1
+classic_toolbar: horizontal
+icon_default: true
+icon_path: ''
+high_contrast_mode: false
+show_user_theme_settings: 1
+third_party_settings:
+  shortcut:
+    module_link: true

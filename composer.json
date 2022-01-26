@@ -1,0 +1,20 @@
+{
+  "name": "iqual/iq_backend_theme",
+  "description": "Unicorn Backend theme - A moden backend theme, based on the gin backend theme.",
+  "type": "drupal-custom-theme",
+  "keywords": [
+    "Drupal"
+  ],
+  "homepage": "https://github.com/iqual-ch/iq_backend_theme",
+  "support": {
+    "issues": "https://github.com/iqual-ch/iq_backend_theme/issues",
+    "source": "https://github.com/iqual-ch/iq_backend_theme"
+  },
+  "require": {
+    "drupal/gin": "^3.0",
+    "drupal/gin_login": "^1.0"
+  }
+}
+
+
+

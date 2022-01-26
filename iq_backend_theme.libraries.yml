@@ -1,0 +1,7 @@
+gin_overrides:
+  version: VERSION
+  css:
+    theme:
+      resources/css/gin-overrides.css: { minified: true, weight: 100000000 }
+  dependencies:
+    - gin/gin

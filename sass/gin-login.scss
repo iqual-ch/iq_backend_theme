@@ -1,0 +1,42 @@
+.user-form-page{
+  &__wallpaper{
+    &::before{
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 120px;
+      z-index: 10;
+      background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+    }
+    &__text{
+      position: absolute;
+      bottom: 0;
+      padding: 1rem;
+      z-index: 20;
+      p{
+        margin: 0;
+      }
+      a {
+        pointer-events: all;
+        &:not(:last-child){
+          padding-right: 1rem;
+          margin-right: 1rem;
+          border-right: 1px solid var(--colorGinPrimary);;
+        }
+      }
+    }
+  }
+}
+
+body.path-user {
+  .user-form-page {
+    .content-header {
+      padding-top: 4.5rem !important;
+      a.toolbar-logo{
+        display: block;
+      }
+    }
+  }
+}

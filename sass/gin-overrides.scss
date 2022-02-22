@@ -203,7 +203,8 @@ fieldset:not(.fieldgroup),
 .dropzone,
 .shepherd-element,
 .entities-list .item-container,
-.entities-list .item-container .field__item{
+.entities-list .item-container .field__item,
+#snippet_preview{
   border-radius: 4px;
 }
 

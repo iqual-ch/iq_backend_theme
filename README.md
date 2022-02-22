@@ -24,3 +24,7 @@ Installation guide:
 
     composer require iqual/iq_backend_theme && drush then gin && drush en gin_toolbar gin_login && drush then iq_backend_theme && drush php:eval '$config = \Drupal::service("config.factory")->getEditable("system.theme"); $config->set("admin", "iq_backend_theme")->save();'
 
+**Don't forget to uninstall Adminimal, once everything is working fine!**
+
+    drush thun adminimal
+    composer remove drupal/adminimal

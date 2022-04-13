@@ -12,7 +12,7 @@ Installation guide:
     drush then gin
 
     // Enable dependency modules
-    drush en gin_toolbar gin_login
+    drush en gin_toolbar gin_login iq_backend_theme_helper
 
     // Enable theme
     drush then iq_backend_theme

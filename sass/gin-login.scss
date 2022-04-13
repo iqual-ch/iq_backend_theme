@@ -30,13 +30,13 @@
   }
 }
 
-body.path-user {
+body.gin-login.path-user {
+  .page-wrapper{
+    margin-top: -1px;
+  }
   .user-form-page {
     .content-header {
       padding-top: 4.5rem !important;
-      a.toolbar-logo{
-        display: block;
-      }
     }
   }
 }

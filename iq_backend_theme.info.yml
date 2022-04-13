@@ -11,6 +11,7 @@ libraries:
 dependencies:
 - gin_toolbar
 - gin_login
+- iq_backend_theme_helper
 
 # Regions
 regions:
@@ -25,4 +26,3 @@ regions:
   sidebar_first: 'First sidebar'
 regions_hidden:
   - sidebar_first
-

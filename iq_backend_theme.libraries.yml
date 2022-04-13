@@ -11,3 +11,15 @@ gin_login:
   css:
     theme:
       resources/css/gin-login.css: { minified: true }
+
+gin_toobar_horizontal_overrides:
+  version: VERSION
+  css:
+    theme:
+      resources/css/gin-toolbar-horizontal-overrides.css: { minified: true }
+
+gin_toobar_vertical_overrides:
+  version: VERSION
+  css:
+    theme:
+      resources/css/gin-toolbar-vertical-overrides.css: { minified: true }

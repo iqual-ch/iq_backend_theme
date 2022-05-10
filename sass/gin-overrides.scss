@@ -473,3 +473,13 @@ table th:last-child{
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
 }
+
+// Dark mode adjustments.
+.gin--dark-mode{
+
+  // Code mirror
+  pre[class*="codemirror"] {
+    background: white;
+    color: black;
+  }
+}

@@ -1,4 +1,13 @@
 // iqual overrides for gin styling
+:root {
+  --ginSidebarWidth: 350px;
+}
+
+@media (min-width: 1440px) {
+  :root {
+    --ginSidebarWidth: 450px;
+  }
+}
 
 
 // border-radius
@@ -595,6 +604,13 @@ fieldset:not(.fieldgroup),
   border-radius: 4px;
 }
 
+// Yoast
+#snippet_preview{
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
 // Views
 table thead{
   border-bottom-left-radius: 0;
@@ -628,6 +644,31 @@ table th:last-child{
     }
   }
 }
+
+// Meta tags.
+.layout-region-node-secondary{
+  [data-drupal-selector*="edit-field-meta-tags"]{
+    .claro-details__content{
+      p{
+        font-size: 14px;
+      }
+      .claro-details__wrapper{
+        margin: 0.5rem !important;
+        .fieldset__label{
+          padding-left: 0.5rem;
+          padding-right: 0.5rem;
+          padding-bottom: 0;
+          padding-top: 0.5rem;
+        }
+        .fieldset__wrapper{
+          margin-left: 0.5rem !important;
+          margin-right: 0.5rem !important;
+        }
+      }
+    }
+  }
+}
+
 
 // Dark mode adjustments.
 .gin--dark-mode{

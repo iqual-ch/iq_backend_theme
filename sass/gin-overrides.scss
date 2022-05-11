@@ -204,7 +204,6 @@ fieldset:not(.fieldgroup),
 .active-items .layout-paragraphs-item.layout-paragraphs-layout::before,
 .layout-paragraphs-field.is-moving .layout-paragraphs-item.layout-paragraphs-layout:hover::before,
 .erl-layout.erl-item.form-wrapper::before,
-.is-horizontal .tabs--primary .tabs__link,
 .is-horizontal .tabs--secondary .tabs__link,
 .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a,
 .card__image img{
@@ -242,6 +241,7 @@ fieldset:not(.fieldgroup),
 .erl-field .erl-disabled-items .erl-item,
 .views-exposed-form.views-exposed-form,
 .views-displays,
+.is-horizontal .tabs--primary .tabs__link,
 .messages,
 [data-drupal-selector=edit-classic-toolbar] .form-radios .form-item--classic-toolbar input{
   border-radius: 6px;

@@ -2,8 +2,6 @@
 
 
 // border-radius
-
-
 .paragraphs-tabs-wrapper .field-multiple-table .draggable.drag-previous::before,
 .breadcrumb__link,
 .admin-item__link:focus{
@@ -473,3 +471,199 @@ table th:last-child{
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
 }
+
+.ui-widget.ui-dialog.ui-dialog-off-canvas{
+  background: none;
+}
+
+
+// Webform
+.webform-off-canvas #drupal-off-canvas{
+  .webform-tabs{
+    .webform-tabs-item-list{
+      a {
+        font-size: 14px;
+      }
+    }
+    .webform-details-toggle-state-wrapper{
+      display: none;
+    }
+
+    .layer-wrapper{
+      padding: 0;
+      font-size: 12px;
+      th{
+        white-space: nowrap;
+      }
+    }
+
+     .form-type--boolean{
+      margin-left: 0;
+      .form-boolean{
+        margin-left: 0;
+        margin-right: 10px;
+      }
+    }
+
+
+  }
+
+  input, select, textarea, button{
+    font-size: 14px;
+    min-height: 0;
+  }
+  input:not([type="image"]), select, textarea{
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+
+  [data-drupal-selector="edit-unique-container"] > div {
+    flex-basis: 100%;
+  }
+
+  .cke.cke.cke_chrome{
+    border-radius: 4px;
+  }
+
+  .tippy-box{
+    min-width: 250px;
+    .tippy-content{
+      padding: 15px;
+    }
+    .webform-element-help--title{
+      color: inherit;
+    }
+  }
+
+  .fieldset__label{
+    margin-bottom: 0.25rem;
+    padding-bottom: 4px;
+  }
+
+
+  .select2-container.select2-container--default{
+    .select2-selection--multiple{
+      border-color: var(--colorGinFormElementBorder);
+      color: var(--colorGinText);
+      background-color: var(--colorGinInputBackground);
+      .select2-selection__rendered{
+        padding-left: calc(0.75rem - 1px);
+        display: block;
+      }
+      .select2-selection__choice{
+        background: none;
+        border: none;
+        font-size: 12px;
+        &__remove{
+          color: var(--colorGinText);
+          &:hover{
+            color: var(--colorGinText);
+          }
+        }
+      }
+      .select2-search__field{
+        margin-top: 0;
+        color: var(--colorGinText);
+      }
+    }
+  }
+  .claro-autocomplete{
+    width: 100%;
+  }
+  .webform-select2{
+    .form-item{
+      margin-bottom: 0;
+      &:not(:first-child){
+        margin-top: 1.5rem;
+      }
+    }
+  }
+}
+
+.select2-container{
+  .select2-dropdown{
+    color: var(--colorGinText);
+    background-color: var(--colorGinInputBackground);
+    border-color: var(--colorGinFormElementBorder);
+    .select2-results{
+      &__options{
+        font-size: 12px;
+      }
+      &__option{
+        padding: calc(0.75rem - 1px) calc(1rem - 1px);
+        strong{
+          padding-left: 0;
+          padding-right: 0;
+        }
+        .select2-results__option{
+          margin-left: calc( -1 * (1rem - 1px));
+          margin-right: calc( -1 * (1rem - 1px));
+        }
+        &[aria-selected="true"]{
+          color: var(--colorGinPrimary);
+          background-color: var(--colorGinItemHover);
+        }
+        &--highlighted{
+          color: var(--colorGinButtonText);
+          background-color: var(--colorGinPrimary);;
+        }
+      }
+    }
+  }
+}
+
+.webform-ajax-form-wrapper{
+  @media (min-width: 961px) {
+    margin-top: 53px;
+  }
+}
+
+.cke.cke.cke_chrome{
+  border-radius: 4px;
+}
+
+// Dark mode adjustments.
+.gin--dark-mode{
+
+  &.cke_editable {
+    color: #fff;
+    * {
+      color: #fff;
+    }
+  }
+
+  // Code mirror
+  pre[class*="codemirror"] {
+    background: white;
+    color: black;
+  }
+
+  // + / - Buttons
+  .webform-multiple-table,
+  .webform-states-table {
+    td input[type="image"]{
+      filter: invert(1);
+    }
+  }
+
+  [role="tablist"]{
+    border-bottom-color: var(--colorGinBorder);
+    [role="tab"]{
+      &[aria-selected="true"]{
+        border-color: var(--colorGinBorder);
+        border-bottom-color: var(--colorGinLayerBackground);
+      }
+      &:hover:not([aria-selected="true"]) {
+        background-color: var(--colorGinItemHover);
+        border-color: var(--colorGinBorder);
+        @media (min-width: 30em) {
+          background-color: var(--colorGinItemHover);
+          border-color: var(--colorGinBorder);
+        }
+      }
+    }
+  }
+
+}
+
+

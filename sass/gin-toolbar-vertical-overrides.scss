@@ -6,7 +6,7 @@
         display: block;
         &:nth-last-child(2){
           position: absolute;
-          top: calc( 100vh - 160px );
+          top: calc( 100vh - 174px );
           left: 0;
           z-index: 1000;
         }
@@ -28,7 +28,7 @@
             .toolbar-lining{
               padding-right: 0;
               ul{
-                background: var(--colorGinItemHover);
+                background: var(--colorGinLayerBackground);
                 border-top: 1px solid var(--colorGinLayerBorder);
                 li{
                   float: none;
@@ -42,7 +42,7 @@
                     &:hover,
                     &:active{
                       color: var(--colorGinPrimaryHover);
-                      background: var(--colorGinButtonText);
+                      background: var(--colorGinItemHover);
                     }
                   }
                 }

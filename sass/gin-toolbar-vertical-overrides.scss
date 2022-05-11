@@ -116,3 +116,10 @@
   }
 }
 
+body.pd-editing-mode{
+  &.gin--vertical-toolbar,
+  &.gin--horizontal-toolbar,
+  &.gin--classic-toolbar{
+    padding-top: 0 !important;
+  }
+}

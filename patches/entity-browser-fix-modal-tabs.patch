@@ -1,0 +1,110 @@
+diff --git a/entity_browser.module b/entity_browser.module
+index db086afefd56b0a5e4770fe52ff174e390bde76e..2a31c01d46aa3e49c6710b7fce7081b360aa3268 100644
+--- a/entity_browser.module
++++ b/entity_browser.module
+@@ -229,3 +229,15 @@ function entity_browser_entity_view_alter(array &$build, EntityInterface $entity
+     unset($build['#contextual_links']);
+   }
+ }
++
++/**
++ * Implements hook_library_info_alter().
++ */
++function entity_browser_library_info_alter(&$libraries, $extension) {
++  if ($extension === 'entity_browser') {
++    $activeTheme = \Drupal::theme()->getActiveTheme()->getName();
++    if (in_array($activeTheme, ['claro', 'gin', 'iq_backend_theme'])) {
++      $libraries['tabs']['js']['js/entity_browser.tabs.next-gen.js'] = [];
++    }
++  }
++}
+diff --git a/js/entity_browser.tabs.js b/js/entity_browser.tabs.js
+index 9c94b65f498b093c365721ab236a95b3119c4514..29255d46680a5308f674aa9f307b86fd212dd3d6 100644
+--- a/js/entity_browser.tabs.js
++++ b/js/entity_browser.tabs.js
+@@ -18,8 +18,8 @@
+         return;
+       }
+
+-      var $nav = $('<nav class="eb-tabs"></nav>');
+-      var $tabs = $(Drupal.theme('entityTabs'));
++      var $nav = Drupal.theme('entityTabsNav');
++      var $tabs = Drupal.theme('entityTabs');
+
+       $form.find('.tab').each(function (index, element) {
+         var $element = $(element);
+@@ -50,6 +50,16 @@
+     }
+   };
+
++  /**
++   * Theme function for entity browser tabs nav.
++   *
++   * @return {object}
++   *   This function returns a jQuery object.
++   */
++  Drupal.theme.entityTabsNav = function () {
++    return $('<nav class="eb-tabs"></nav>');
++  };
++
+   /**
+    * Theme function for entity browser tabs.
+    *
+diff --git a/js/entity_browser.tabs.next-gen.js b/js/entity_browser.tabs.next-gen.js
+new file mode 100644
+index 0000000000000000000000000000000000000000..1257a18cf0c4f70d0974cf81ed325ea7cd21fccf
+--- /dev/null
++++ b/js/entity_browser.tabs.next-gen.js
+@@ -0,0 +1,52 @@
++/**
++ * @file Entity_browser.tabs.next-gen.js.
++ *
++ * Theme overrides for next-gen admin themes (claro / gin).
++ */
++
++(function ($, Drupal) {
++
++  /**
++   * Theme function for entity browser tabs nav.
++   *
++   * @return {object}
++   *   This function returns a jQuery object.
++   */
++  Drupal.theme.entityTabsNav = function () {
++    return $('<nav class="eb-tabs is-horizontal"></nav>');
++  };
++
++  /**
++   * Theme function for entity browser tabs.
++   *
++   * @return {object}
++   *   This function returns a jQuery object.
++   */
++  Drupal.theme.entityTabs = function () {
++    return $('<ul class="tabs" role="navigation" aria-label="Tabs"></ul>');
++  };
++
++  /**
++   * Theme function for an entity browser tab.
++   *
++   * @param {object} settings
++   *   An object with the following keys:
++   * @param {string} settings.title
++   *   The name of the tab.
++   * @param {string} settings.class
++   *   Classes for the tab.
++   * @param {string} settings.id
++   *   ID for the data- button ID.
++   *
++   * @return {object}
++   *   This function returns a jQuery object.
++   */
++  Drupal.theme.entityTab = function (settings) {
++    return $('<li class="tabs__tab js-tab" tabindex="-1"></li>')
++      .addClass(settings.class)
++      .append($('<a href="#"></a>').addClass('tabs__link js-tabs-link').addClass(settings.class).attr('data-button-id', settings.id)
++        .append(settings.title)
++      );
++  };
++
++}(jQuery, Drupal));

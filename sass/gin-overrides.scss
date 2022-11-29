@@ -348,26 +348,34 @@ fieldset:not(.fieldgroup),
   }
 }
 
-.gin-entity-browser .entity-browser-form{
-  border-radius: 0 !important;
-}
+.gin-entity-browser{
+  .entity-browser-form{
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    margin-top: 0;
+  }
 
-.gin-entity-browser .messages-list{
-  display: none;
-}
+  .messages-list{
+    display: none;
+  }
 
-.gin-entity-browser .eb-tabs{
-  margin-left: 0;
-}
+  .eb-tabs{
+    margin-left: 0;
+    padding-top: 10px;
+    ul li.active {
+      border-bottom: none;
+    }
+  }
 
-.gin-entity-browser .eb-tabs a:focus{
-  box-shadow: none;
-}
+  .eb-tabs a:focus{
+    box-shadow: none;
+  }
 
-.gin-entity-browser .form-actions{
-  margin-bottom: -1px;
-}
+  .form-actions{
+    margin-bottom: -1px;
+  }
 
+}
 
 .field--widget-entity-browser-entity-reference .entities-list .item-container{
   padding: 1rem;
@@ -721,5 +729,14 @@ table th:last-child{
       }
     }
   }
+}
 
+// Dialog / Modal
+.ui-dialog .ui-dialog-content > .ajax-progress-throbber{
+  display: none;
+}
+
+html.gin--dark-mode{
+  height: 100%;
+  background-color: var(--gin-bg-layer);
 }

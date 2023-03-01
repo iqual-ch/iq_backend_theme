@@ -14,12 +14,5 @@
     "drupal/gin": "^3.0",
     "drupal/gin_login": "^1.0",
     "iqual/iq_backend_theme_helper": "^2.0"
-  },
-  "extra": {
-    "patches": {
-      "drupal/entity_browser": {
-        "Issue 3191070 - Fix modal tabs markup": "./patches/entity-browser-fix-modal-tabs.patch"
-      }
-    }
   }
 }

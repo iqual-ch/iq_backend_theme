@@ -1,7 +1,6 @@
 name: Unicorn Backend theme
 type: theme
 description: 'A moden backend theme, based on the gin backend theme.'
-version: VERSION
 core_version_requirement: ^8 || ^9
 base theme: gin
 

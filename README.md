@@ -1,7 +1,8 @@
 # iq_backend_theme
 
 Backend theme for unicorn installations.\
-Per default, gin's dark mode is enabled but each user can override the admin theme settings the user profile (/user/edit).
+Per default, gin's dark mode is enabled but each user can override the admin
+theme settings the user profile (/user/edit).
 
 Installation guide:
 

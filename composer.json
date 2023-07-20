@@ -12,7 +12,10 @@
   },
   "require": {
     "drupal/gin": "^3.0",
-    "drupal/gin_login": "^1.0",
-    "iqual/iq_backend_theme_helper": "^2.0"
+    "drupal/gin_toolbar": "^1.0",
+    "drupal/gin_login": "^2.0",
+    "iqual/iq_backend_theme_helper": "^3.0",
+    "php": "^8.1",
+    "drupal/core": "^9.5 || ^10"
   }
 }
